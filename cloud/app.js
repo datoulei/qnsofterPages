@@ -13,7 +13,8 @@ app.use(express.bodyParser());    // 读取请求 body 的中间件
 //   res.send(200,req.body);
 // });
 app.get('/wechat', function (req, res) {
-  res.send(200,'wechat');
+  var echostr = req.query.echostr;
+  res.send(200, echostr);
 });
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
