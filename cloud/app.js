@@ -12,6 +12,9 @@ app.use(express.bodyParser());    // 读取请求 body 的中间件
 //   // res.render('hello', { message: 'Congrats, you just set up your app!' });
 //   res.send(200,req.body);
 // });
+app.get('/wechat', function (req, res) {
+  res.send(200,'wechat');
+});
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
 app.listen();
